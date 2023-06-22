@@ -64,7 +64,34 @@
         .table{
             overflow: auto;
         }
-        
+
+        #button{
+            margin-bottom: 0px;
+        }
+
+        .icons{
+            margin:30%;
+            color:rgb(0, 0, 0);
+            font-size: 30px;
+            
+        }
+
+        #seperate{
+        display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+        }
+
+        #connect{
+            width:300px;
+            margin: 50px 90px;
+           
+        }
+
+       .about{
+        background-color: rgba(1, 1, 1, 0.351);
+       } 
     </style>
 
   </head>
@@ -81,25 +108,22 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="https://www.linkedin.com/in/purvi-baranwal/" target="blank">About me</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  How to use?
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li type="rounded"
+                  class="dropdown-item" >1.Go the search box.</li>
+                  <li class="dropdown-item" >2.Type the city name</li>
+                  <li class="dropdown-item" >3.Click on search.</li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <input id="city" class="form-control me-2" type="search" placeholder="City" aria-label="Search">
               <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
             </form>
           </div>
@@ -121,9 +145,8 @@
                       <li>Temperature is <span id="temp"></span>°C</li>
                       <li>Mininmum Temperature: <span id="min_temp"></span</li>
                       <li>Maximum Temperature: <span id="max_temp"></span</li>
-                      
+
                     </ul>
-                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
                   </div>
                 </div>
               </div>
@@ -139,9 +162,9 @@
                     <li>Humidity :  <span id="humidity"></span</li>
                     <li>Wind Degree <span id="wind_degrees"></span</li>
                       </ul>
-                    <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
                   </div>
                 </div>
+                
               </div>
               <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm ">
@@ -153,123 +176,36 @@
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Sunrise Time is <span id="sunrise"></span</li>
                         <li>Sunset Time is <span id="sunset"></span</li>
-                        <li>Wind Speed <span id="wind_speed"></span</li>
-                       
-                    </ul>
-                    <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                        <li>Wind Speed <span id="wind_speed"></span</li>   
+                    </ul> 
                   </div>
+                </div></div>
                 </div>
-              </div>
+              
+              
             </div>
-        
-            <!-- <h2 class="display-6 text-center mb-4">Other Cities</h2>
-            <div class="table-responsive" >
-                <table class="table text-center">
-                <thead >
-                  <tr>
-                    <th style="width: 34%;"></th>
-                    <th style="width: 22%;">Temperature</th>
-                    <th style="width: 22%;">Feels like</th>
-                    <th style="width: 22%;">Humidity</th>
-                    <th style="width: 22%;">Max Temp</th>
-                    <th style="width: 22%;">Min Temp</th>
-                    <th style="width: 22%;">Sunrise</th>
-                    <th style="width: 22%;">Sunset</th>
-                    <th style="width: 22%;">Cloud PCT</th>
-                    <th style="width: 22%;">Wind Degrees</th>
-                    <th style="width: 22%;">Wind Speed</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row" class="text-start">Delhi</th>
-                    <td><span id="tempDelhi"></span></td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="text-start">Kathmandu</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                  </tr>
-                </tbody>
-        
-                <tbody>
-                  <tr>
-                    <th scope="row" class="text-start">New York</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="text-start">Sydney</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="text-start">London</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="text-start">Moscow</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                  </tr>
-                </tbody>
-              </table> -->
-            
-            </div>
+        </div>
           </main>
+          <div id="seperate">
+          <div id="connect">
+            <a href="https://www.linkedin.com/in/purvi-baranwal/" target="blank" class="icons">
+                <ion-icon name="logo-linkedin"></ion-icon></a>
+             <a href="https://www.instagram.com/_._purvi/" target="blank" class="icons">
+                <ion-icon name="logo-instagram"></ion-icon></a>
+             <a href="https://github.com/PuR-vI" target="blank" class="icons">
+                <ion-icon name="logo-github"></ion-icon></a>
+                <a href="mailto:purvi.wk@gmail.com"  class="w-100 btn btn-lg btn-primary" id="button">Contact us. </a>
+            </div>
+                <div class="p-4  rounded about">
+                    <h4 class="fst-italic" style="font-size: xx-large;">About this page ~</h4>
+                    <p class="mb-0" style="font-size: larger;">This weather display page is a web app showcasing real-time weather data for multiple cities. It employs HTML, CSS, and JavaScript, utilizing the RapidAPI platform to fetch weather information. Users can search for specific cities, view detailed weather updates, and compare conditions across locations in a visually appealing and responsive design.</p>
+                  </div>
+            </div>
       </div>
-   
-
+       
+             
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
     <script src="script.js"></script>
